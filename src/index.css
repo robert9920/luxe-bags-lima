@@ -1,13 +1,235 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ===== VARIABLES ===== */
+:root {
+  --cream: #f5f0ea;
+  --dark: #1a1714;
+  --gold: #b8976a;
+  --gold-light: #d4b896;
+  --red: #c0392b;
+  --gray: #888;
+  --card-bg: #ffffff;
+  --shadow: 0 8px 40px rgba(0,0,0,0.09);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: var(--dark);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(184,151,106,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.hero-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto;
+}
+
+/* ===== FILTROS ===== */
+.filtros {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 40px;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background: transparent;
+  border: 1.5px solid var(--dark);
+  color: var(--dark);
+  padding: 8px 22px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.filtro-btn:hover, .filtro-btn.active {
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.filtro-count {
+  margin-left: auto;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+  padding: 0 40px 60px;
+}
+
+/* ===== CARD ===== */
+.bag-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.bag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+}
+
+.bag-card.sold-out {
+  opacity: 0.75;
+}
+
+.bag-image-wrapper {
+  position: relative;
+  background: #f9f7f5;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bag-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.bag-card:not(.sold-out):hover .bag-image {
+  transform: scale(1.05);
+}
+
+/* SOLD OUT OVERLAY */
+.sold-out-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,23,20,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.sold-out-overlay span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.15em;
+  border: 2px solid white;
+  padding: 8px 20px;
+}
+
+/* BAG INFO */
+.bag-info {
+  padding: 16px 20px 20px;
+  border-top: 1px solid #f0ece6;
+}
+
+.bag-marca {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.bag-nombre {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin: 2px 0 10px;
+}
+
+.bag-precio {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.precio-agotado {
+  font-size: 0.9rem;
+  color: var(--red);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 28px;
+  background: var(--dark);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .grid { padding: 0 16px 40px; gap: 16px; }
+  .filtros { padding: 20px 16px; }
+  .hero { padding: 40px 16px 32px; }
 }
