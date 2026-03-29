@@ -24,7 +24,7 @@ const carteras = [
     marca: "DKNY",
     // nombre: "Crossbody Logo",
     precio: 220,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 4,
