@@ -128,7 +128,7 @@ const carteras = [
     marca: "GUESS",
     // nombre: "Heart Crossbody",
     precio: 270,
-    soldOut: false,
+    soldOut: true,
   },
 ];
 
