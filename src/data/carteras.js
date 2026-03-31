@@ -64,7 +64,7 @@ const carteras = [
     marca: "Tommy Hilfiger",
     // nombre: "Leather Hobo",
     precio: 150,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 9,
