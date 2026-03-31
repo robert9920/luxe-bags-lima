@@ -8,7 +8,7 @@ const carteras = [
     marca: "Steve Madden",           // ✏️ Cambia la marca
     // nombre: "Tote Clásica",  // ✏️ Nombre descriptivo (opcional)
     precio: 280,             // ✏️ Precio en soles
-    soldOut: false,          // ✏️ Pon true si ya se vendió
+    soldOut: true,          // ✏️ Pon true si ya se vendió
   },
   {
     id: 2,
