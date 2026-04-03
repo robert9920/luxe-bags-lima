@@ -56,7 +56,7 @@ const carteras = [
     marca: "Juicy Couture",
     // nombre: "Quilted Tote",
     precio: 270,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 8,
