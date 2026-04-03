@@ -40,7 +40,7 @@ const carteras = [
     marca: "GUESS",
     // nombre: "Flap Shoulder",
     precio: 270,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 6,
