@@ -88,7 +88,7 @@ const carteras = [
     marca: "GUESS",
     // nombre: "Fleming Mini",
     precio: 240,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 12,
