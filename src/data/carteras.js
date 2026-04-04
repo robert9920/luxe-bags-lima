@@ -104,7 +104,7 @@ const carteras = [
     marca: "ALDO",
     // nombre: "Chain Shoulder",
     precio: 260,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 14,
