@@ -120,7 +120,7 @@ const carteras = [
     marca: "ALDO",
     // nombre: "Wristlet Grande",
     precio: 230,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 16,
