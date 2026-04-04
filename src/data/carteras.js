@@ -16,7 +16,7 @@ const carteras = [
     marca: "ALDO",
     // nombre: "Mini Satchel",
     precio: 280,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 3,
