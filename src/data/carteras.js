@@ -96,7 +96,7 @@ const carteras = [
     marca: "ALDO",
     // nombre: "Satchel Clásica",
     precio: 260,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 13,
