@@ -80,7 +80,7 @@ const carteras = [
     marca: "Steve Madden",
     // nombre: "Bryant Tote",
     precio: 270,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 11,
