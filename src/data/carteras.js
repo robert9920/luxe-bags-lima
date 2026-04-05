@@ -72,7 +72,7 @@ const carteras = [
     marca: "GUESS",
     // nombre: "Mini Crossbody",
     precio: 270,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 10,
@@ -112,7 +112,7 @@ const carteras = [
     marca: "ALDO",
     // nombre: "Flap Bag",
     precio: 260,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 15,
