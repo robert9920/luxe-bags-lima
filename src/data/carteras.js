@@ -32,7 +32,7 @@ const carteras = [
     marca: "GUESS",
     // nombre: "Jet Set Tote",
     precio: 270,
-    soldOut: false,           // ← ejemplo de sold out
+    soldOut: true,           // ← ejemplo de sold out
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const carteras = [
     marca: "Ed Hardy",
     // nombre: "Structured Bag",
     precio: 260,
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 7,
